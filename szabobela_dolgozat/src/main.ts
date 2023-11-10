@@ -24,7 +24,7 @@ function feltolt()
 }
 function check()
 {
-    const body = document.getElementById('hibaID')!.innerHTML=``;
+    document.getElementById('hibaID')!.innerHTML=``;
     let checkPass = 0;
     hiba = [];
     const nev = (document.getElementById('nameID')! as HTMLInputElement).value;
@@ -57,7 +57,7 @@ function check()
 
     }
     else {
-        hiba.push('Hibás ár: '+ar); 
+        hiba.push('Hibás ár: '+ar + ' Ft'); 
     }
     if (magassag >= 15)
     {
@@ -66,7 +66,7 @@ function check()
         
     }
     else {
-        hiba.push('Hibás magasság: '+magassag);          
+        hiba.push('Hibás magasság: '+magassag+' cm');          
     }
     if(checkPass==4)
     {
