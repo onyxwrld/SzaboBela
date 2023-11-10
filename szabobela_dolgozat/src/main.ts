@@ -31,7 +31,9 @@ function check()
     const ev =  parseInt((document.getElementById('yearID')! as HTMLInputElement).value);
     const ar =  parseInt((document.getElementById('priceID')! as HTMLInputElement).value);
     const magassag =  parseInt((document.getElementById('heightID')! as HTMLInputElement).value);
-    if(nev.trim().length > 0)
+    const nevTest = /^[A-Za-z, ]+$/;
+    console.log(nevTest.test(nev));
+    if(nev.trim().length > 0 && nevTest.test(nev))
     {
         console.log('OK');
         checkPass++;
